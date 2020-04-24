@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\negrime\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\negrime\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_TowerDefense.-1513855072.00" t="ExcludeRecursive" />
+    <e p="C:\Users\negrime\Desktop\TowerDefense" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Base.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="Bullet.cs" t="Include" />
+          <e p="Cell.cs" t="Include" />
+          <e p="Enemy.cs" t="Include" />
+          <e p="EnemyStats.cs" t="Include" />
+          <e p="Foundation.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
+          <e p="InputManager.cs" t="Include" />
+          <e p="Interfaces" t="Include">
+            <e p="IAttack.cs" t="Include" />
+            <e p="IDamage.cs" t="Include" />
+          </e>
+          <e p="MainAI.cs" t="Include" />
+          <e p="MoneyController.cs" t="Include" />
+          <e p="PrepareStage.cs" t="Include" />
+          <e p="PrepareStageView.cs" t="Include" />
+          <e p="ShopController.cs" t="Include" />
+          <e p="ShopStats.cs" t="Include" />
+          <e p="ShopView.cs" t="Include" />
+          <e p="Turret.cs" t="Include" />
+          <e p="TurretStats.cs" t="Include" />
+          <e p="WaveManager.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="TowerDefense.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
