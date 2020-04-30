@@ -17,7 +17,6 @@
             <e p="Turret.cs" t="Include" />
             <e p="WaveManager.cs" t="Include" />
           </e>
-          <e p="EnemyStats.cs" t="Include" />
           <e p="Interfaces" t="Include">
             <e p="IAttack.cs" t="Include" />
             <e p="IDamage.cs" t="Include" />
@@ -29,10 +28,15 @@
             <e p="PrepareStage.cs" t="Include" />
             <e p="ShopController.cs" t="Include" />
           </e>
-          <e p="PrepareStageView.cs" t="Include" />
-          <e p="ShopStats.cs" t="Include" />
-          <e p="ShopView.cs" t="Include" />
-          <e p="TurretStats.cs" t="Include" />
+          <e p="Stats" t="Include">
+            <e p="EnemyStats.cs" t="Include" />
+            <e p="ShopStats.cs" t="Include" />
+            <e p="TurretStats.cs" t="Include" />
+          </e>
+          <e p="Views" t="Include">
+            <e p="PrepareStageView.cs" t="Include" />
+            <e p="ShopView.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

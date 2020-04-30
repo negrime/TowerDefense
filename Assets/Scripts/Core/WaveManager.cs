@@ -12,6 +12,9 @@ public class WaveManager : MonoBehaviour
     
     [SerializeField]
     private List<GameObject> _enemiesPrefabs;
+    
+    [SerializeField]
+    private GameObject _Boss;
 
     [SerializeField]
     private int _enemyCount;
@@ -60,7 +63,9 @@ public class WaveManager : MonoBehaviour
             StartCoroutine(SpawnBurst(_enemyCount / 2));
             yield return new WaitForSeconds(_enemyCount / 2);
         }
-   
+        yield return new WaitForSeconds(2);
+        GameObject go = Instantiate(_Boss, spawnPlace.position, Quaternion.identity);
+        enemiesOnMap.Add(go);
     }
 
     private IEnumerator SpawnBurst(int count)
@@ -69,7 +74,7 @@ public class WaveManager : MonoBehaviour
         {
             GameObject go = Instantiate(_enemiesPrefabs[Random.Range(0, _enemiesPrefabs.Count)], spawnPlace.position, Quaternion.identity);
             enemiesOnMap.Add(go);
-            yield return new WaitForSeconds(Random.Range(0.6f, 1));
+            yield return new WaitForSeconds(Random.Range(1f, 2f));
         }
     }
 }

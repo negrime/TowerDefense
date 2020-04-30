@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour, IDamage
     [SerializeField]
     private EnemyStats _stats;
 
+    public EnemyStats Stats => _stats;
+
     [SerializeField]
     private float _currentHp;
 

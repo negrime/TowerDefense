@@ -21,7 +21,9 @@ public class EnemyStats
     public int Hp => _hp;
 
     public int Damage => _damage;
+    
     public float Speed => _speed;
 
     public int Award => _award;
+    
 }
