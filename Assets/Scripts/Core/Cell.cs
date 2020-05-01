@@ -9,28 +9,24 @@ public class Cell : MonoBehaviour
     private Color _startMaterialColor;
     private Material _currentMaterialColor;
 
-    public GameObject Foundation;
+    [SerializeField]
+    private GameObject _foundation;
 
-    private bool isFree;
+    private bool _isFree;
 
-    public bool IsFree => isFree;
-
+    public bool IsFree => _isFree;
 
     void Start()
     {
-        isFree = true;
+        _isFree = true;
         _currentMaterialColor = GetComponent<MeshRenderer>().materials[0];
         _startMaterialColor = _currentMaterialColor.color;
     }
     
-
-    
-
     public void SpawnFoundation()
     {
-        isFree = false;
+        _isFree = false;
 
-       FindObjectOfType<MainAI>().PreviousFoundation =  Instantiate(Foundation, transform.position, Quaternion.identity);
+       FindObjectOfType<MainAI>().PreviousFoundation =  Instantiate(_foundation, transform.position, Quaternion.identity);
     }
-    
-}
+    }

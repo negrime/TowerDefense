@@ -10,7 +10,7 @@ public class MoneyController : MonoBehaviour
     [SerializeField]
     private Text _moneyText;
     [SerializeField]
-    private int money;
+    private int _money;
 
     private void Start()
     {
@@ -19,18 +19,18 @@ public class MoneyController : MonoBehaviour
 
     public bool TryToBuyItem(int price)
     {
-        return money >= price;
+        return _money >= price;
     }
 
     public void UpdateMoney(int value)
     {
-        money += value;
+        _money += value;
         UpdateText();
     }
 
 
     private void UpdateText()
     {
-        _moneyText.text = $"${money}";
+        _moneyText.text = $"${_money}";
     }
 }

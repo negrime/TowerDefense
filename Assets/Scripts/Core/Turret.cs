@@ -22,15 +22,12 @@ public class Turret : MonoBehaviour, IAttack
     private GameObject _currentTarget;
 
 
-    private float currentTime;
+    private float _currentTime;
     
-    
-
-
     
     private void Start()
     {
-        currentTime = 0;
+        _currentTime = 0;
         GetComponent<SphereCollider>().radius = _stats.Range;
         _waveManager = FindObjectOfType<WaveManager>();
     }
@@ -43,7 +40,7 @@ public class Turret : MonoBehaviour, IAttack
 
     private void UpdateTarget()
     {
-        if (!(_waveManager.EnemiesOnMap.Count > 0))
+        if ((_waveManager.EnemiesOnMap.Count <= 0))
         {
             return;
         }
@@ -62,7 +59,6 @@ public class Turret : MonoBehaviour, IAttack
         }
         
         
-
         var direction = _currentTarget.transform.position - transform.position;
         Vector3 rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(direction),
             Time.deltaTime * _stats.RotateSpeed).eulerAngles;
@@ -92,20 +88,20 @@ public class Turret : MonoBehaviour, IAttack
 
     public void Attack()
     {
-        if (currentTime <= 0)
+        if (_currentTime <= 0)
         {
             GameObject bullet = Instantiate(_bullet, _shootPos.transform.position, _shootPos.transform.rotation);
             bullet.GetComponent<Bullet>().Damage = _stats.Damage;
-            currentTime = _stats.TimeToShoot;
+            _currentTime = _stats.TimeToShoot;
         }
     }
 
     private void UpdateShootCoolDown()
     {
-        currentTime -= Time.deltaTime;
-        if (currentTime <= 0)
+        _currentTime -= Time.deltaTime;
+        if (_currentTime <= 0)
         {
-            currentTime = 0;
+            _currentTime = 0;
         }
     }
 
